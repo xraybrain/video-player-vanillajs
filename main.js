@@ -47,11 +47,12 @@ function addToPlayList(files = []) {
 
         playList.push(media);
         addToPlayListMenu(media.title);
-        console.log(media)
         if (videoPlayer.paused) play();
       })
 
-      reader.readAsDataURL(file);
+      setTimeout(() => {
+        reader.readAsDataURL(file);
+      }, 0);
     }
   }
 }
