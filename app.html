@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A web video player app">
+  <title>Video Player</title>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+    integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <div class="video-container">
+    <div class="top-menu">
+      <h5 class="title-panel">
+        <marquee behavior="" direction="left" id="title">
+          Video Player
+        </marquee>
+      </h5>
+      <div>
+        <label class="btn" for="file-loader">
+          <i class="las la-plus"></i>
+        </label>
+        <input type="file" id="file-loader" class="hide" multiple>
+      </div>
+    </div>
+
+    <div class="video-panel">
+      <video src="" id="video-player"></video>
+
+      <div class="align-center-middle">
+        <button type="button" class="play-btn btn btn-large">
+          <i class="las la-play"></i>
+        </button>
+
+        <button type="button" class="pause-btn btn btn-large hide">
+          <i class="las la-pause"></i>
+        </button>
+      </div>
+
+      <div class="align-bottom">
+        <div class="expand-control">
+          <label id="expand-btn" class="btn">
+            <i class="las la-expand"></i>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="progress-panel">
+      <div class="progress-timer">
+        <span id="video-timer">00:00</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+      <div class="progress-timer">
+        <span id="video-duration">00:00</span>
+      </div>
+    </div>
+
+    <div class="navigation-panel">
+      <button type="button" id="prev-btn" class="btn">
+        <i class="las la-backward"></i>
+      </button>
+      <button type="button" class="play-btn btn btn-big">
+        <i class="las la-play"></i>
+      </button>
+      <button type="button" class="pause-btn btn btn-big hide">
+        <i class="las la-pause"></i>
+      </button>
+      <button type="button" id="next-btn" class="btn">
+        <i class="las la-forward"></i>
+      </button>
+      <div class="dropup">
+        <button type="button" class="btn">
+          <i class="las la-film"></i>
+        </button>
+
+        <div class="menu" id="play-list-menu">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>
